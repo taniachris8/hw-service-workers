@@ -17,6 +17,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
   width: 34%;
   min-height: 400px;
   border: 1px solid rgb(58, 58, 58);
@@ -45,12 +47,12 @@ body {
 }
 
 .news-container {
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 10px;
   margin-bottom: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .news {
@@ -58,18 +60,93 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
 }
 
 .date {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .news-wrapper {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .news-image {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 45px;
+}
+
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.skeleton-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.skeleton-date {
+  width: 200px;
+  height: 17px;
+  background: #b9b9b9;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-details {
+  display: flex;
+  width: 100%;
+  gap: 17px;
+}
+
+.skeleton-image {
+  width: 75px;
+  height: 45px;
+  background: #b9b9b9;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-title {
+  width: 500px;
+  height: 17px;
+  background: #b9b9b9;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.error-message-element {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #f8f8f8d8;
+  font-size: 16px;
 }

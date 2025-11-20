@@ -16,6 +16,8 @@ export default class News {
         <p class="news-title">${this.title}</p>
         </div>
         `;
+
+    this.parentEl.prepend(this.news);
   }
 
   formatDate() {
